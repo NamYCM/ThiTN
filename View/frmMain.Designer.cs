@@ -89,6 +89,7 @@ namespace THITN
             this.btDangXuat.Caption = "Đăng xuất";
             this.btDangXuat.Id = 3;
             this.btDangXuat.Name = "btDangXuat";
+            this.btDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btDangXuat_ItemClick);
             // 
             // ribHeThong
             // 
@@ -158,20 +159,20 @@ namespace THITN
             // MaGVSV
             // 
             this.MaGVSV.Name = "MaGVSV";
-            this.MaGVSV.Size = new System.Drawing.Size(52, 17);
-            this.MaGVSV.Text = "MaGVSV";
+            this.MaGVSV.Size = new System.Drawing.Size(130, 17);
+            this.MaGVSV.Text = "Mã giáo viên/ sinh viên";
             // 
             // HoTen
             // 
             this.HoTen.Name = "HoTen";
-            this.HoTen.Size = new System.Drawing.Size(41, 17);
-            this.HoTen.Text = "HoTen";
+            this.HoTen.Size = new System.Drawing.Size(43, 17);
+            this.HoTen.Text = "Họ tên";
             // 
             // Nhom
             // 
             this.Nhom.Name = "Nhom";
             this.Nhom.Size = new System.Drawing.Size(41, 17);
-            this.Nhom.Text = "Nhom";
+            this.Nhom.Text = "Nhóm";
             // 
             // xtraTabbedMdiManager1
             // 

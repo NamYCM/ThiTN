@@ -7,11 +7,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using THITN.Control;
 
 namespace THITN
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private bool isLogin = false;
+
         public frmMain()
         {
             InitializeComponent();
@@ -41,8 +44,15 @@ namespace THITN
             //Tiep tuc if
         }
 
+        public void HideMenu ()
+        {
+            //Phan quyen
+            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = false;
+        }
+
         private void btDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isLogin = true;
             Form frm = CheckExists(typeof(frmDangNhap));
             if (frm != null) frm.Activate();
             else
@@ -80,6 +90,13 @@ namespace THITN
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!isLogin) return;
+            ProgramController.Instance.LogOut();
+            isLogin = false;
         }
     }
 }

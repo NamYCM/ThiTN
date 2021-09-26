@@ -95,6 +95,8 @@ namespace THITN
         private void btDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (!isLogin) return;
+            Form frm = CheckExists(typeof(frmDangNhap));
+            if (frm != null) return;
             ProgramController.Instance.LogOut();
             isLogin = false;
         }

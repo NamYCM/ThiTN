@@ -52,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ProgramController.cs" />
+    <Compile Include="THITNDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THITNDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="THITNDataSet.xsc">
+      <DependentUpon>THITNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="THITNDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THITNDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THITNDataSet.xss">
+      <DependentUpon>THITNDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

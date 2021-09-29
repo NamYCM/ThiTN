@@ -117,10 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>207, 17</value>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="xtraTabbedMdiManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>323, 17</value>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlNQX0dldFJlc3VsdFRlc3QiPjxGaWVsZCBOYW1lPSJTVFQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJDQVVIT0kiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOT0lEVU5HIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNIT09TRVMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFQX0FOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQ0hPTiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <metadata name="thitnDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
+  <metadata name="bAITHITableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="sqlDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9IlNQX0dldFJlc3VsdFRlc3QiPjxGaWVsZCBOYW1lPSJTVFQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJDQVVIT0kiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOT0lEVU5HIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNIT09TRVMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFQX0FOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQ0hPTiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <metadata name="sqlDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <data name="sqlDataSource3.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTMiPjxWaWV3IE5hbWU9IlNQX0dldFJlc3VsdFRlc3QiPjxGaWVsZCBOYW1lPSJTVFQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJDQVVIT0kiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOT0lEVU5HIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNhdUEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2F1QiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDYXVDIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNhdUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFQX0FOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQ0hPTiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <metadata name="sqlDataSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
+  <data name="sqlDataSource4.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTQiPjxWaWV3IE5hbWU9IlNQX0dldFJlc3VsdFRlc3QiPjxGaWVsZCBOYW1lPSJTVFQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJDQVVIT0kiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOT0lEVU5HIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNhdUEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2F1QiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDYXVDIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNhdUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFQX0FOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQ0hPTiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
 </root>

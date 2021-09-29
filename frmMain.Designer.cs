@@ -30,10 +30,12 @@ namespace THITN
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btDangNhap = new DevExpress.XtraBars.BarButtonItem();
             this.btTaoTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.btResultTest = new DevExpress.XtraBars.BarButtonItem();
             this.ribHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,9 +62,10 @@ namespace THITN
             this.ribbonControl1.SearchEditItem,
             this.btDangNhap,
             this.btTaoTaiKhoan,
-            this.btDangXuat});
+            this.btDangXuat,
+            this.btResultTest});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 4;
+            this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
@@ -83,6 +86,7 @@ namespace THITN
             this.btTaoTaiKhoan.Caption = " Tạo tài khoản";
             this.btTaoTaiKhoan.Id = 2;
             this.btTaoTaiKhoan.Name = "btTaoTaiKhoan";
+            this.btTaoTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btTaoTaiKhoan_ItemClick);
             // 
             // btDangXuat
             // 
@@ -90,6 +94,15 @@ namespace THITN
             this.btDangXuat.Id = 3;
             this.btDangXuat.Name = "btDangXuat";
             this.btDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btDangXuat_ItemClick);
+            // 
+            // btResultTest
+            // 
+            this.btResultTest.Caption = "Kết quả thi";
+            this.btResultTest.Id = 4;
+            this.btResultTest.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btResultTest.ImageOptions.Image")));
+            this.btResultTest.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btResultTest.ImageOptions.LargeImage")));
+            this.btResultTest.Name = "btResultTest";
+            this.btResultTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btResultTest_ItemClick);
             // 
             // ribHeThong
             // 
@@ -141,8 +154,8 @@ namespace THITN
             // 
             // ribbonPageGroup4
             // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btResultTest);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // statusStrip1
             // 
@@ -220,6 +233,7 @@ namespace THITN
         public System.Windows.Forms.ToolStripStatusLabel HoTen;
         public System.Windows.Forms.ToolStripStatusLabel Nhom;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btResultTest;
     }
 }
 

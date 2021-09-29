@@ -43,6 +43,7 @@ namespace THITN
             // 
             // cbCoSo
             // 
+            this.cbCoSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCoSo.FormattingEnabled = true;
             this.cbCoSo.Location = new System.Drawing.Point(318, 142);
             this.cbCoSo.Name = "cbCoSo";
@@ -145,8 +146,6 @@ namespace THITN
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbCoSo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -155,5 +154,6 @@ namespace THITN
         private System.Windows.Forms.Button btDangNhap;
         private System.Windows.Forms.Button btDangKy;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbCoSo;
     }
 }

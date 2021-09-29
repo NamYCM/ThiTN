@@ -23,7 +23,7 @@ namespace THITN.Control
 
         public void LogOut ()
         {
-            Program.mCoSo = 0;
+            //Program.mCoSo = 0;
             Program.loginDN = "";
             Program.passwordDN = "";
             Program.myReader = null;

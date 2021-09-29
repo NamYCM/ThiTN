@@ -47,7 +47,7 @@ namespace THITN
                 Program.mlogin = tbTaiKhoan.Text; Program.password = tbMatKhau.Text;
                 if (Program.KetNoi() == 0) return;
 
-                Program.mCoSo = cbCoSo.SelectedIndex;
+                //Program.mCoSo = cbCoSo.SelectedIndex;
                 Program.loginDN = Program.mlogin;
                 Program.passwordDN = Program.password;
                 string strLenh = "EXEC SP_Lay_Thong_Tin_NV_Tu_Login '" + Program.mlogin + "'";
@@ -62,7 +62,7 @@ namespace THITN
 
                 Program.loginDN = Program.mlogin;
                 Program.passwordDN = Program.password;
-
+                
                 string strLenh = "EXEC SP_Lay_Thong_Tin_Sinh_Vien '" + tbTaiKhoan.Text + "','" + tbMatKhau.Text + "'";
                 Program.myReader = Program.ExecSqlDataReader(strLenh);
             }
@@ -91,14 +91,22 @@ namespace THITN
                 if (Program.myReader.GetString(3) == Program.servername1)
                 {
                     Program.servername = Program.servername1;
-                    Program.mCoSo = 0;
+                    //Program.mCoSo = 0;
                 } 
                 else if (Program.myReader.GetString(3) == Program.servername2)
                 {
                     Program.servername = Program.servername2;
-                    Program.mCoSo = 1;
+                    //Program.mCoSo = 1;
                 }
 
+                //Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database +
+                //        ";User ID=" + Program.mlogin + ";password=" + Program.password;
+                if (Program.KetNoi() == 0)
+                {
+                    XtraMessageBox.Show("Không tồn tại login SV trên " + Program.servername, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                    
                 Program.frmMain.MaGVSV.Text = "Mã sinh viên = " + Program.username;
             }
             Program.frmMain.HoTen.Text = "Họ tên = " + Program.mHoten;
@@ -170,7 +178,6 @@ namespace THITN
         {
             try
             {
-                Console.WriteLine(cbCoSo.SelectedValue.ToString());
                 Program.servername = cbCoSo.SelectedValue.ToString();
             }
             catch (Exception) { }

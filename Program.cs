@@ -1,11 +1,13 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using THITN.View;
 
 namespace THITN
 {
@@ -32,7 +34,7 @@ namespace THITN
         public static String passwordDN = "";
         public static String mGroup;
         public static String mHoten;
-        public static int mCoSo = 0;
+        //public static int mCoSo = 0;
 
         public static BindingSource bdsDspm = new BindingSource();
         public static frmMain frmMain;
@@ -53,7 +55,7 @@ namespace THITN
             }
             catch (Exception e)
             {
-                MessageBox.Show("Lỗi kết nối CSDL.\nBạn xem lại tài khoản và mật khẩu.\n" + e.Message, "", MessageBoxButtons.OK);
+                XtraMessageBox.Show("Lỗi kết nối CSDL.\nBạn xem lại tài khoản và mật khẩu.\n" + e.Message, "", MessageBoxButtons.OK);
                 return 0;
             }
         }
@@ -102,8 +104,8 @@ namespace THITN
             catch (SqlException ex)
             {
                 if (ex.Message.Contains("Error converting data type varchar to int"))
-                    MessageBox.Show("Bạn format cell lại cột \"Ngày thi\" qua kiểu Number hoặc mở file Excel.", "", MessageBoxButtons.OK);
-                else MessageBox.Show(ex.Message, "", MessageBoxButtons.OK);
+                    XtraMessageBox.Show("Bạn format cell lại cột \"Ngày thi\" qua kiểu Number hoặc mở file Excel.", "", MessageBoxButtons.OK);
+                else XtraMessageBox.Show(ex.Message, "", MessageBoxButtons.OK);
                 conn.Close();
                 return ex.State;
             }
@@ -117,9 +119,12 @@ namespace THITN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //frmTest = new frm_PhieuNhapKetQuaThi();
+            //Application.Run(frmTest);
+
             frmMain = new frmMain();
             Application.Run(frmMain);
-            //Application.Run(new frmMain());
         }
     }
 }

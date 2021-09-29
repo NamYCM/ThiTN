@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using THITN.Control;
+using THITN.View;
 
 namespace THITN
 {
@@ -40,7 +42,12 @@ namespace THITN
             Nhom.Text = "Nhóm = " + Program.mGroup;
 
             //Phan quyen
-            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
+            //ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
+            if (Program.mGroup == "SINHVIEN") ribBaoCao.Visible = true;
+            else if (Program.mGroup == "TRUONG") ribBaoCao.Visible = true;
+            //else if (Program.mGroup == "COSO")
+            //else if (Program.mGroup == "TRUONG")
+            //else if (Program.mGroup == "LOP")
             //Tiep tuc if
         }
 
@@ -48,10 +55,17 @@ namespace THITN
         {
             //Phan quyen
             ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = false;
+
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }    
         }
 
         private void btDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (isLogin) return;
+
             isLogin = true;
             Form frm = CheckExists(typeof(frmDangNhap));
             if (frm != null) frm.Activate();
@@ -59,7 +73,6 @@ namespace THITN
             {
                 frmDangNhap f = new frmDangNhap();
                 f.MdiParent = this;
-
                 f.Show();
             }
         }
@@ -99,6 +112,26 @@ namespace THITN
             if (frm != null) return;
             ProgramController.Instance.LogOut();
             isLogin = false;
+        }
+
+        private void btTaoTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Xrpt_ResultTest2 report = new Xrpt_ResultTest2("001", "CSDL", 2);
+            //ReportPrintTool reportPrintTool = new ReportPrintTool(report);
+            //reportPrintTool.ShowPreviewDialog();
+        }
+
+        private void btResultTest_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frm_PhieuNhapKetQuaThi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frm_PhieuNhapKetQuaThi f = new frm_PhieuNhapKetQuaThi();
+                f.MdiParent = this;
+
+                f.Show();
+            }
         }
     }
 }

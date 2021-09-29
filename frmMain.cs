@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using THITN.Control;
 using THITN.View;
+using THITN.View.Reports;
 
 namespace THITN
 {
@@ -45,6 +46,7 @@ namespace THITN
             //ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
             if (Program.mGroup == "SINHVIEN") ribBaoCao.Visible = true;
             else if (Program.mGroup == "TRUONG") ribBaoCao.Visible = true;
+            else if (Program.mGroup == "GIAOVIEN") ribBaoCao.Visible = true;
             //else if (Program.mGroup == "COSO")
             //else if (Program.mGroup == "TRUONG")
             //else if (Program.mGroup == "LOP")
@@ -128,6 +130,19 @@ namespace THITN
             else
             {
                 frm_PhieuNhapKetQuaThi f = new frm_PhieuNhapKetQuaThi();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frm_ScoreSubjectInput));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frm_ScoreSubjectInput f = new frm_ScoreSubjectInput();
                 f.MdiParent = this;
 
                 f.Show();

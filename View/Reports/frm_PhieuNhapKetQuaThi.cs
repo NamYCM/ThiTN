@@ -192,7 +192,10 @@ namespace THITN.View
         {
             if (Program.mGroup == "TRUONG")
             {
-                LoadSubject();
+                if (cbUsername.Items.Count > 0)
+                    LoadSubject();
+                else
+                    cbSubjects.DataSource = new DataTable();
 
                 if (cbSubjects.Items.Count > 0)
                     LoadTime();
@@ -228,14 +231,17 @@ namespace THITN.View
 
             SP_GetSubjectOfStudentTableAdapter subjectAdapter = new SP_GetSubjectOfStudentTableAdapter();
             subjectAdapter.Connection = sqlConnection;
-            cbSubjects.DataSource = subjectAdapter.GetData(cbUsername.SelectedItem.ToString());
             cbSubjects.ValueMember = "MAMH";
             cbSubjects.DisplayMember = "TENMH";
+            cbSubjects.DataSource = subjectAdapter.GetData(cbUsername.SelectedItem.ToString());
         }
 
         private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadTime();
+            if (cbSubjects.Items.Count > 0)
+                LoadTime();
+            else
+                cbTime.DataSource = new DataTable();
         }
 
         private void LoadTime()
@@ -264,10 +270,10 @@ namespace THITN.View
             //}
 
             BANGDIEMTableAdapter scoreAdapter = new BANGDIEMTableAdapter();
-            scoreAdapter.Connection = sqlConnection; 
-            cbTime.DataSource = scoreAdapter.GetDataByUsernameSubject(cbUsername.SelectedItem.ToString(), cbSubjects.SelectedValue.ToString());
+            scoreAdapter.Connection = sqlConnection;
             cbTime.DisplayMember = "LAN";
             cbTime.ValueMember = "LAN";
+            cbTime.DataSource = scoreAdapter.GetDataByUsernameSubject(cbUsername.SelectedItem.ToString(), cbSubjects.SelectedValue.ToString());
         }
     }
 }

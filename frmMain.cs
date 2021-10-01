@@ -44,19 +44,31 @@ namespace THITN
 
             //Phan quyen
             //ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
-            if (Program.mGroup == "SINHVIEN") ribBaoCao.Visible = true;
-            else if (Program.mGroup == "TRUONG") ribBaoCao.Visible = true;
-            else if (Program.mGroup == "GIAOVIEN") ribBaoCao.Visible = true;
-            //else if (Program.mGroup == "COSO")
-            //else if (Program.mGroup == "TRUONG")
-            //else if (Program.mGroup == "LOP")
-            //Tiep tuc if
-        }
+            if (Program.mGroup == "SINHVIEN")
+            {
+                ribBaoCao.Visible = true;
+                btResultTest.Enabled = true;
+            }
+            else if (Program.mGroup == "TRUONG")
+            {
+                ribBaoCao.Visible = true;
+                btResultTest.Enabled = true;
+            }
+            else if (Program.mGroup == "GIAOVIEN")
+            {
+                ribBaoCao.Visible = true;
+                btScoreBoard.Enabled = true;
+            }
+                //else if (Program.mGroup == "COSO")
+                //else if (Program.mGroup == "TRUONG")
+                //else if (Program.mGroup == "LOP")
+                //Tiep tuc if
+            }
 
         public void HideMenu ()
         {
             //Phan quyen
-            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = false;
+            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = btScoreBoard.Enabled = btResultTest.Enabled = false;
 
             foreach (Form f in this.MdiChildren)
             {

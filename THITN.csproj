@@ -118,6 +118,12 @@
     <Compile Include="View\Reports\Xrpt_ScoreSubject.Designer.cs">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Login\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Reports\Xrpt_ScoreSubject.resx">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

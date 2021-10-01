@@ -406,7 +406,7 @@ namespace THITN
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.table2});
-            this.Detail.HeightF = 43.75F;
+            this.Detail.HeightF = 42.83307F;
             this.Detail.Name = "Detail";
             // 
             // table2
@@ -611,6 +611,7 @@ namespace THITN
             this.DataSource = this.sqlDataSource4;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Landscape = true;
+            this.Margins = new System.Drawing.Printing.Margins(99, 100, 100, 100);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {

@@ -17,6 +17,10 @@ namespace THITN.View.Reports
     {
         public frm_ScoreSubjectInput()
         {
+            if (Program.mGroup != "GIAOVIEN")
+            {
+                return;
+            }
             InitializeComponent();
         }
 

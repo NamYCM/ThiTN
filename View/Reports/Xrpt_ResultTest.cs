@@ -45,7 +45,9 @@ namespace THITN
 
             gradeAdapter.Connection.ConnectionString = Program.connstr;
             data = gradeAdapter.GetDataByUsernameSubjectTime(username, subjectID, (short)time);
-            this.xlbTestDate.Text = ": " + data.Rows[0]["NGAYTHI"].ToString();
+            //this.xlbTestDate.Text = ": " + data.Rows[0]["NGAYTHI"].ToString();
+            DateTime dateTime = DateTime.Parse(data.Rows[0]["NGAYTHI"].ToString());
+            xlbTestDate.Text = ": " + dateTime.Day.ToString() + "/" + dateTime.Month.ToString() + "/" + dateTime.Year.ToString();
             this.xlbTimeTest.Text = ": " + data.Rows[0]["LAN"].ToString();
 
             classAdapter.Connection.ConnectionString = Program.connstr;

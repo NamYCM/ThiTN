@@ -36,6 +36,7 @@ namespace THITN
             this.btTaoTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btResultTest = new DevExpress.XtraBars.BarButtonItem();
+            this.btScoreBoard = new DevExpress.XtraBars.BarButtonItem();
             this.ribHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -49,7 +50,6 @@ namespace THITN
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -65,7 +65,7 @@ namespace THITN
             this.btTaoTaiKhoan,
             this.btDangXuat,
             this.btResultTest,
-            this.barButtonItem1});
+            this.btScoreBoard});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 6;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -100,11 +100,22 @@ namespace THITN
             // btResultTest
             // 
             this.btResultTest.Caption = "Kết quả thi";
+            this.btResultTest.Enabled = false;
             this.btResultTest.Id = 4;
             this.btResultTest.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btResultTest.ImageOptions.Image")));
             this.btResultTest.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btResultTest.ImageOptions.LargeImage")));
             this.btResultTest.Name = "btResultTest";
             this.btResultTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btResultTest_ItemClick);
+            // 
+            // btScoreBoard
+            // 
+            this.btScoreBoard.Caption = "Bảng điểm môn học";
+            this.btScoreBoard.Enabled = false;
+            this.btScoreBoard.Id = 5;
+            this.btScoreBoard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btScoreBoard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btScoreBoard.Name = "btScoreBoard";
+            this.btScoreBoard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // ribHeThong
             // 
@@ -157,7 +168,7 @@ namespace THITN
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btResultTest);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btScoreBoard);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // statusStrip1
@@ -193,15 +204,6 @@ namespace THITN
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Bảng điểm môn học";
-            this.barButtonItem1.Id = 5;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // frmMain
             // 
@@ -246,7 +248,7 @@ namespace THITN
         public System.Windows.Forms.ToolStripStatusLabel Nhom;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btResultTest;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btScoreBoard;
     }
 }
 

@@ -54,7 +54,9 @@ namespace THITN.View.Reports
 
             teacherRegistedAdapter.Connection = Program.conn;
             data = teacherRegistedAdapter.GetDataBySubjectClassTime(subjectID, classID, (short)time);
-            xlbTestDate.Text = ": " + data.Rows[0]["NGAYTHI"].ToString();
+            DateTime dateTime = DateTime.Parse(data.Rows[0]["NGAYTHI"].ToString());
+            xlbTestDate.Text = ": " + dateTime.Day.ToString() + "/" + dateTime.Month.ToString() + "/" + dateTime.Year.ToString();
+            
             xlbTimeTest.Text = ": " + data.Rows[0]["LAN"].ToString();
         }
 

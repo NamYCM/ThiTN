@@ -94,7 +94,8 @@ namespace THITN.View
             //if (Program.mGroup == "SINHVIEN")
             //    this.sP_GetSubjectOfStudentTableAdapter.Fill(this.tHITNDataSet.SP_GetSubjectOfStudent, Program.username);
             // TODO: This line of code loads data into the 'tHITNDataSet.MONHOC' table. You can move, or remove it, as needed.
-            //this.mONHOCTableAdapter.FillBy(this.tHITNDataSet.MONHOC, "001");
+            //this.mONHOCTableAdapter......FillBy(this.tHITNDataSet.MONHOC, "001");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,7 +105,7 @@ namespace THITN.View
             {
                  report = new Xrpt_ResultTest(cbUsername.SelectedItem.ToString(), cbSubjects.SelectedValue.ToString(), Int16.Parse(cbTime.SelectedValue.ToString()));
             }
-            catch (NullReferenceException ex)
+            catch (System.NullReferenceException ex)
             {
                 XtraMessageBox.Show("Không được để trống dữ liệu" + ex.Message, "", MessageBoxButtons.OK);
                 return;

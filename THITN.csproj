@@ -106,6 +106,12 @@
     <Compile Include="View\Reports\frm_ScoreSubjectInput.Designer.cs">
       <DependentUpon>frm_ScoreSubjectInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Reports\Xrpt_RegesteredTestList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\Xrpt_RegesteredTestList.Designer.cs">
+      <DependentUpon>Xrpt_RegesteredTestList.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Reports\Xrpt_ResultTest.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -117,12 +123,6 @@
     </Compile>
     <Compile Include="View\Reports\Xrpt_ScoreSubject.Designer.cs">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Reports\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="View\Reports\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\Login\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -146,14 +146,14 @@
     <EmbeddedResource Include="View\Reports\frm_ScoreSubjectInput.resx">
       <DependentUpon>frm_ScoreSubjectInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\Xrpt_RegesteredTestList.resx">
+      <DependentUpon>Xrpt_RegesteredTestList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Reports\Xrpt_ResultTest.resx">
       <DependentUpon>Xrpt_ResultTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Reports\Xrpt_ScoreSubject.resx">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Reports\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

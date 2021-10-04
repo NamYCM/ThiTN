@@ -6,9 +6,11 @@ using System.Drawing;
 
 namespace THITN.View.Reports
 {
-    public partial class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
+    public partial class Xrpt_RegesteredTestList : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReport1()
+        
+
+        public Xrpt_RegesteredTestList()
         {
             InitializeComponent();
         }

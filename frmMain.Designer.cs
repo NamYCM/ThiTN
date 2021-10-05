@@ -50,6 +50,7 @@ namespace THITN
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btRegisteredList = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -65,9 +66,10 @@ namespace THITN
             this.btTaoTaiKhoan,
             this.btDangXuat,
             this.btResultTest,
-            this.btScoreBoard});
+            this.btScoreBoard,
+            this.btRegisteredList});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 6;
+            this.ribbonControl1.MaxItemId = 7;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
@@ -112,8 +114,8 @@ namespace THITN
             this.btScoreBoard.Caption = "Bảng điểm môn học";
             this.btScoreBoard.Enabled = false;
             this.btScoreBoard.Id = 5;
-            this.btScoreBoard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btScoreBoard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btScoreBoard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btScoreBoard.ImageOptions.Image")));
+            this.btScoreBoard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btScoreBoard.ImageOptions.LargeImage")));
             this.btScoreBoard.Name = "btScoreBoard";
             this.btScoreBoard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -169,6 +171,7 @@ namespace THITN
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btResultTest);
             this.ribbonPageGroup4.ItemLinks.Add(this.btScoreBoard);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btRegisteredList);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // statusStrip1
@@ -204,6 +207,16 @@ namespace THITN
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // btRegisteredList
+            // 
+            this.btRegisteredList.Caption = "Danh sách đăng ký";
+            this.btRegisteredList.Enabled = false;
+            this.btRegisteredList.Id = 6;
+            this.btRegisteredList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btRegisteredList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btRegisteredList.Name = "btRegisteredList";
+            this.btRegisteredList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btRegisteredList_ItemClick);
             // 
             // frmMain
             // 
@@ -249,6 +262,7 @@ namespace THITN
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btResultTest;
         private DevExpress.XtraBars.BarButtonItem btScoreBoard;
+        private DevExpress.XtraBars.BarButtonItem btRegisteredList;
     }
 }
 

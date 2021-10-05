@@ -39,13 +39,13 @@ namespace THITN.View
                 cbSubjects.ValueMember = "MAMH";
                 cbSubjects.DisplayMember = "TENMH";
             }
-            else if (Program.mGroup == "TRUONG")
+            else
             {
                 //KetNoiCSDLGoc();
                 //LayDSPM();
                 LoadUsername();
             }
-            else return;
+            //else return;
             //tbUsername.Text = Program.username;
             //cbTime.SelectedIndex = 1; cbTime.SelectedIndex = 0;
         }
@@ -191,7 +191,7 @@ namespace THITN.View
 
         private void cbUsername_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Program.mGroup == "TRUONG")
+            if (Program.mGroup != "SINHVIEN")
             {
                 if (cbUsername.Items.Count > 0)
                     LoadSubject();

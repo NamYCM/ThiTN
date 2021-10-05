@@ -17,10 +17,10 @@ namespace THITN.View.Reports
     {
         public frm_ScoreSubjectInput()
         {
-            if (Program.mGroup != "GIAOVIEN")
-            {
-                return;
-            }
+            //if (Program.mGroup != "GIAOVIEN")
+            //{
+            //    return;
+            //}
             InitializeComponent();
         }
 
@@ -31,11 +31,11 @@ namespace THITN.View.Reports
 
         private void frm_ScoreSubjectInput_Load(object sender, EventArgs e)
         {
-            if (Program.mGroup != "GIAOVIEN")
-            {
-                Close();
-                return;
-            }
+            //if (Program.mGroup != "GIAOVIEN")
+            //{
+            //    Close();
+            //    return;
+            //}
 
             LoadClass();
         }

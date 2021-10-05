@@ -53,11 +53,19 @@ namespace THITN
             {
                 ribBaoCao.Visible = true;
                 btResultTest.Enabled = true;
+                btRegisteredList.Enabled = true;
             }
             else if (Program.mGroup == "GIAOVIEN")
             {
                 ribBaoCao.Visible = true;
                 btScoreBoard.Enabled = true;
+                btResultTest.Enabled = true;
+            }
+            else if (Program.mGroup == "COSO")
+            {
+                ribBaoCao.Visible = true;
+                btResultTest.Enabled = true;
+                btRegisteredList.Enabled = true;
             }
                 //else if (Program.mGroup == "COSO")
                 //else if (Program.mGroup == "TRUONG")
@@ -155,6 +163,19 @@ namespace THITN
             else
             {
                 frm_ScoreSubjectInput f = new frm_ScoreSubjectInput();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
+
+        private void btRegisteredList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frm_RegesteredTestListInput));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frm_RegesteredTestListInput f = new frm_RegesteredTestListInput();
                 f.MdiParent = this;
 
                 f.Show();

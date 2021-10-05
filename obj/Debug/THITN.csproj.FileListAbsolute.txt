@@ -247,4 +247,5 @@ C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.frm_PhieuNhapKetQuaThi.re
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.Xrpt_ResultTest.resources
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.Xrpt_ScoreSubject.resources
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.frm_ScoreSubjectInput.resources
-C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.XtraReport1.resources
+C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.frm_RegesteredTestListInput.resources
+C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.Xrpt_RegesteredTestList.resources

@@ -193,5 +193,30 @@ namespace THITN
             //    args.Cancel = true;
             //}
         }
+
+        private void tbMatKhau_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

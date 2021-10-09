@@ -36,7 +36,6 @@ namespace THITN
             this.tbTaiKhoan = new System.Windows.Forms.TextBox();
             this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.btDangNhap = new System.Windows.Forms.Button();
-            this.btDangKy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +59,7 @@ namespace THITN
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 25;
             this.label1.Text = "Cơ sở";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -70,6 +70,7 @@ namespace THITN
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Tài khoản";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -80,6 +81,7 @@ namespace THITN
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 27;
             this.label3.Text = "Mật khẩu";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tbTaiKhoan
             // 
@@ -87,6 +89,7 @@ namespace THITN
             this.tbTaiKhoan.Name = "tbTaiKhoan";
             this.tbTaiKhoan.Size = new System.Drawing.Size(266, 20);
             this.tbTaiKhoan.TabIndex = 28;
+            this.tbTaiKhoan.TextChanged += new System.EventHandler(this.tbTaiKhoan_TextChanged);
             // 
             // tbMatKhau
             // 
@@ -94,10 +97,11 @@ namespace THITN
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.Size = new System.Drawing.Size(266, 20);
             this.tbMatKhau.TabIndex = 29;
+            this.tbMatKhau.TextChanged += new System.EventHandler(this.tbMatKhau_TextChanged);
             // 
             // btDangNhap
             // 
-            this.btDangNhap.Location = new System.Drawing.Point(291, 289);
+            this.btDangNhap.Location = new System.Drawing.Point(388, 291);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btDangNhap.TabIndex = 30;
@@ -105,18 +109,8 @@ namespace THITN
             this.btDangNhap.UseVisualStyleBackColor = true;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
-            // btDangKy
-            // 
-            this.btDangKy.Location = new System.Drawing.Point(424, 289);
-            this.btDangKy.Name = "btDangKy";
-            this.btDangKy.Size = new System.Drawing.Size(75, 23);
-            this.btDangKy.TabIndex = 31;
-            this.btDangKy.Text = "Đăng ký";
-            this.btDangKy.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btDangKy);
             this.panel1.Controls.Add(this.btDangNhap);
             this.panel1.Controls.Add(this.tbMatKhau);
             this.panel1.Controls.Add(this.tbTaiKhoan);
@@ -152,7 +146,6 @@ namespace THITN
         private System.Windows.Forms.TextBox tbTaiKhoan;
         private System.Windows.Forms.TextBox tbMatKhau;
         private System.Windows.Forms.Button btDangNhap;
-        private System.Windows.Forms.Button btDangKy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbCoSo;
     }

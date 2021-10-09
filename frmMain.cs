@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using THITN.Control;
 using THITN.View;
+using THITN.View.Login;
 using THITN.View.Reports;
 
 namespace THITN
@@ -54,6 +55,7 @@ namespace THITN
                 ribBaoCao.Visible = true;
                 btResultTest.Enabled = true;
                 btRegisteredList.Enabled = true;
+                btTaoTaiKhoan.Enabled = true;
             }
             else if (Program.mGroup == "GIAOVIEN")
             {
@@ -66,6 +68,7 @@ namespace THITN
                 ribBaoCao.Visible = true;
                 btResultTest.Enabled = true;
                 btRegisteredList.Enabled = true;
+                btTaoTaiKhoan.Enabled = true;
             }
                 //else if (Program.mGroup == "COSO")
                 //else if (Program.mGroup == "TRUONG")
@@ -76,7 +79,7 @@ namespace THITN
         public void HideMenu ()
         {
             //Phan quyen
-            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = btScoreBoard.Enabled = btResultTest.Enabled = false;
+            btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = btScoreBoard.Enabled = btResultTest.Enabled = false;
 
             foreach (Form f in this.MdiChildren)
             {
@@ -141,6 +144,14 @@ namespace THITN
             //Xrpt_ResultTest2 report = new Xrpt_ResultTest2("001", "CSDL", 2);
             //ReportPrintTool reportPrintTool = new ReportPrintTool(report);
             //reportPrintTool.ShowPreviewDialog();
+            Form frm = CheckExists(typeof(frmCreateAccount));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmCreateAccount f = new frmCreateAccount();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
 
         private void btResultTest_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

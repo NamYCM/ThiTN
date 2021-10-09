@@ -249,3 +249,4 @@ C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.Xrpt_ScoreSubject
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.frm_ScoreSubjectInput.resources
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.frm_RegesteredTestListInput.resources
 C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Reports.Xrpt_RegesteredTestList.resources
+C:\Users\Admin\Desktop\Code\THITN\obj\Debug\THITN.View.Login.frmCreateAccount.resources

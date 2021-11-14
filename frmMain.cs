@@ -71,11 +71,12 @@ namespace THITN
                 btRegisteredList.Enabled = true;
                 btTaoTaiKhoan.Enabled = true;
             }
-                //else if (Program.mGroup == "COSO")
-                //else if (Program.mGroup == "TRUONG")
-                //else if (Program.mGroup == "LOP")
-                //Tiep tuc if
-            }
+            //else if (Program.mGroup == "COSO")
+            //else if (Program.mGroup == "TRUONG")
+            //else if (Program.mGroup == "LOP")
+            //Tiep tuc if
+            btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = btScoreBoard.Enabled = btResultTest.Enabled = true;
+        }
 
         public void HideMenu ()
         {
@@ -204,6 +205,19 @@ namespace THITN
             NhapMon nhapMon = new NhapMon();
             nhapMon.MdiParent = this;
             nhapMon.Show();
+        }
+
+        private void barButtonItem1_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frm_ChuanBiThi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frm_ChuanBiThi f = new frm_ChuanBiThi();
+                f.MdiParent = this;
+
+                f.Show();
+            }
         }
     }
 }

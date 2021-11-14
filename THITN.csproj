@@ -60,7 +60,7 @@
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.1\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.1\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ProgramController.cs" />
+    <Compile Include="SqlQuery.cs" />
     <Compile Include="THITNDataSet.cs">
       <DependentUpon>THITNDataSet.xsd</DependentUpon>
     </Compile>
@@ -86,6 +87,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>THITNDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_ChuanBiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_ChuanBiThi.designer.cs">
+      <DependentUpon>frm_ChuanBiThi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Insert\NhapMon.cs">
       <SubType>Form</SubType>
@@ -149,6 +156,9 @@
     <Compile Include="View\Reports\Xrpt_ScoreSubject.Designer.cs">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frm_ChuanBiThi.resx">
+      <DependentUpon>frm_ChuanBiThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Insert\NhapMon.resx">
       <DependentUpon>NhapMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="View\Thi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

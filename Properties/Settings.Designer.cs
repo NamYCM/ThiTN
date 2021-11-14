@@ -33,5 +33,16 @@ namespace THITN.Properties {
                 return ((string)(this["THITNConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-S3ASIHQ\\MSSQLSERVER1;Initial Catalog=THITN;Persist Security I" +
+            "nfo=True;User ID=sa")]
+        public string THITNConnectionString1 {
+            get {
+                return ((string)(this["THITNConnectionString1"]));
+            }
+        }
     }
 }

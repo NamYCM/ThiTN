@@ -51,6 +51,7 @@ namespace THITN
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ThemMHBT = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -67,16 +68,18 @@ namespace THITN
             this.btDangXuat,
             this.btResultTest,
             this.btScoreBoard,
-            this.btRegisteredList});
+            this.btRegisteredList,
+            this.ThemMHBT});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
             this.ribDanhMuc,
             this.ribNghiepVu,
             this.ribBaoCao});
-            this.ribbonControl1.Size = new System.Drawing.Size(889, 158);
+            this.ribbonControl1.Size = new System.Drawing.Size(1037, 193);
             // 
             // btDangNhap
             // 
@@ -167,6 +170,7 @@ namespace THITN
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.ThemMHBT);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
@@ -187,46 +191,58 @@ namespace THITN
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MaGVSV,
             this.HoTen,
             this.Nhom});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 506);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 624);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(889, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1037, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // MaGVSV
             // 
             this.MaGVSV.Name = "MaGVSV";
-            this.MaGVSV.Size = new System.Drawing.Size(130, 17);
+            this.MaGVSV.Size = new System.Drawing.Size(162, 20);
             this.MaGVSV.Text = "Mã giáo viên/ sinh viên";
             // 
             // HoTen
             // 
             this.HoTen.Name = "HoTen";
-            this.HoTen.Size = new System.Drawing.Size(43, 17);
+            this.HoTen.Size = new System.Drawing.Size(54, 20);
             this.HoTen.Text = "Họ tên";
             // 
             // Nhom
             // 
             this.Nhom.Name = "Nhom";
-            this.Nhom.Size = new System.Drawing.Size(41, 17);
+            this.Nhom.Size = new System.Drawing.Size(50, 20);
             this.Nhom.Text = "Nhóm";
             // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // ThemMHBT
+            // 
+            this.ThemMHBT.Caption = "Thêm Môn học";
+            this.ThemMHBT.Id = 8;
+            this.ThemMHBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.ThemMHBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.ThemMHBT.Name = "ThemMHBT";
+            this.ThemMHBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThemMHBT_ItemClick);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 528);
+            this.ClientSize = new System.Drawing.Size(1037, 650);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Form Chính";
@@ -264,6 +280,7 @@ namespace THITN
         private DevExpress.XtraBars.BarButtonItem btResultTest;
         private DevExpress.XtraBars.BarButtonItem btScoreBoard;
         private DevExpress.XtraBars.BarButtonItem btRegisteredList;
+        private DevExpress.XtraBars.BarButtonItem ThemMHBT;
     }
 }
 

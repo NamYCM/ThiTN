@@ -45,6 +45,7 @@ namespace THITN
 
             //Phan quyen
             //ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
+            ribNghiepVu.Visible = true;
             if (Program.mGroup == "SINHVIEN")
             {
                 ribBaoCao.Visible = true;
@@ -79,7 +80,7 @@ namespace THITN
         public void HideMenu ()
         {
             //Phan quyen
-            btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = btScoreBoard.Enabled = btResultTest.Enabled = false;
+            btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible= btScoreBoard.Enabled = btResultTest.Enabled = false;
 
             foreach (Form f in this.MdiChildren)
             {
@@ -191,6 +192,18 @@ namespace THITN
 
                 f.Show();
             }
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void ThemMHBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            NhapMon nhapMon = new NhapMon();
+            nhapMon.MdiParent = this;
+            nhapMon.Show();
         }
     }
 }

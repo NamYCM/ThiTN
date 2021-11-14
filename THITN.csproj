@@ -54,6 +54,8 @@
     <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -79,6 +81,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>THITNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="THITNDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THITNDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Insert\NhapMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Insert\NhapMon.Designer.cs">
+      <DependentUpon>NhapMon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login\frmCreateAccount.cs">
       <SubType>Form</SubType>
@@ -136,6 +149,9 @@
     <Compile Include="View\Reports\Xrpt_ScoreSubject.Designer.cs">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Insert\NhapMon.resx">
+      <DependentUpon>NhapMon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login\frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +209,17 @@
     </None>
     <None Include="THITNDataSet.xss">
       <DependentUpon>THITNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="THITNDataSet11.xsc">
+      <DependentUpon>THITNDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="THITNDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THITNDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="THITNDataSet11.xss">
+      <DependentUpon>THITNDataSet11.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

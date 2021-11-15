@@ -202,12 +202,57 @@ namespace THITN
 
         private void ThemMHBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            NhapMon nhapMon = new NhapMon();
-            nhapMon.MdiParent = this;
-            nhapMon.Show();
+            Form frm = CheckExists(typeof(NhapMon));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapMon nhapMon = new NhapMon();
+                nhapMon.MdiParent = this;
+                nhapMon.Show();
+            }
+            
         }
 
         private void barButtonItem1_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frm_ChuanBiThi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frm_ChuanBiThi f = new frm_ChuanBiThi();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
+
+        private void ThemLopBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapLop));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapLop nhapLop = new NhapLop();
+                nhapLop.MdiParent = this;
+
+                nhapLop.Show();
+            }
+        }
+
+        private void NhapKhoaBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapKhoa));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapKhoa nhapKhoa = new NhapKhoa();
+                nhapKhoa.MdiParent = this;
+
+                nhapKhoa.Show();
+            }
+        }
+
+        private void btnThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form frm = CheckExists(typeof(frm_CBThi));
             if (frm != null) frm.Activate();

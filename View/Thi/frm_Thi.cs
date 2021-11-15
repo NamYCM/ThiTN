@@ -109,59 +109,67 @@ namespace THITN.View
             }
             showQuetion(index);
         }
+        //lưu dữ liệu 
+        private void saveData()
+        {
+            //lưu bảng điểm
+            int soCauTLDung = 0;
+            float diem;
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].YourAnswer.Equals(list[i].TrueAnswer.Trim()))
+                {
+                    soCauTLDung++;
+                }
+            }
+            diem = (float)soCauTLDung / list.Count * 10;
+            Console.WriteLine(diem);
+            bangDiem.diem = diem;
+            int value = SqlQuery.updateBangDiem(bangDiem.maSV, bangDiem.maMH, bangDiem.lan, bangDiem.ngayThi, bangDiem.diem);
+            if (value != 0)
+            {
+                MessageBox.Show("thêm bảng điểm thất bại !", "thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("thêm bảng điểm thành công !", "thông báo", MessageBoxButtons.OK);
+                int _baiThi = SqlQuery.getBaiThi(bangDiem.maSV, bangDiem.maMH, bangDiem.lan);
+                if (_baiThi == 0)
+                {
+                    MessageBox.Show("Lấy bài thi không thành công !", "thông báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    int _check = -1;
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        baiThi = new BaiThi();
+                        baiThi.baiThi = _baiThi;
+                        baiThi.maCauHoi = list[i].maCauHoi;
+                        baiThi.daChon = list[i].YourAnswer;
+                        baiThi.STT = i + 1;
+                        _check = SqlQuery.updateBaiThi(baiThi.baiThi, baiThi.maCauHoi, baiThi.daChon, baiThi.STT);
+                        if (_check != 0)
+                        {
+                            MessageBox.Show("thêm bài thi thất bại !", "thông báo", MessageBoxButtons.OK);
+                            break;
+                        }
+                    }
+                    if (_check == 0)
+                    {
+                        timer1.Stop();
+                        this.Close();
+                    }
+                }
+
+            }
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Bạn có muốn nộp bài và thoát khỏi cuộc thi hay không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
             {
-                //lưu bảng điểm
-                int soCauTLDung = 0;
-                float diem;
-                for (int i = 0; i < list.Count; i++)
-                {
-                    if (list[i].YourAnswer.Equals(list[i].TrueAnswer))
-                    {
-                        soCauTLDung++;
-                    }
-                }
-                diem = soCauTLDung / list.Count * 10;
-                bangDiem.diem = diem;
-                int value = SqlQuery.updateBangDiem(bangDiem.maSV, bangDiem.maMH, bangDiem.lan, bangDiem.ngayThi, bangDiem.diem);
-                if (value != 0)
-                {
-                    MessageBox.Show("thêm bảng điểm thất bại !", "thông báo", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("thêm bảng điểm thành công !", "thông báo", MessageBoxButtons.OK);
-                    int _baiThi = SqlQuery.getBaiThi(bangDiem.maSV, bangDiem.maMH, bangDiem.lan);
-                    if (_baiThi == 0)
-                    {
-                        MessageBox.Show("Lấy bài thi không thành công !", "thông báo", MessageBoxButtons.OK);
-                    }else
-                    {
-                        int _check = -1;
-                        for (int i =0; i < list.Count; i++)
-                        {
-                            baiThi = new BaiThi();
-                            baiThi.baiThi = _baiThi;
-                            baiThi.maCauHoi = list[i].maCauHoi;
-                            baiThi.daChon = list[i].YourAnswer;
-                            baiThi.STT = i + 1;
-                            _check = SqlQuery.updateBaiThi(baiThi.baiThi, baiThi.maCauHoi, baiThi.daChon, baiThi.STT);
-                            if (_check != 0)
-                            {
-                                MessageBox.Show("thêm bài thi thất bại !", "thông báo", MessageBoxButtons.OK);
-                                break;
-                            }
-                        }
-                        if (_check == 0)
-                        {
-                            this.Close();
-                        }
-                    }
-                   
-                }
+                saveData();
             }
             
             
@@ -214,7 +222,7 @@ namespace THITN.View
                 timer1.Stop();
                 if (DialogResult.OK == MessageBox.Show("Đã hết giờ làm bài !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop))
                 {
-                    this.Close();
+                    saveData();
                 }
             }else
             {

@@ -150,7 +150,6 @@ namespace THITN.View
             String _timeExam = ngayGioThi;
             DateTime oDate = DateTime.ParseExact(_timeExam.Trim(), "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
             oDate =  oDate.AddMinutes(thoiGianThi);
-            Console.WriteLine(oDate.ToString());
             DateTime today = DateTime.Now;
             int diffDateTime = DateTime.Compare(oDate, today);
             if (diffDateTime < 0)

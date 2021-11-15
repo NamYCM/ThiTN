@@ -15,7 +15,7 @@ namespace THITN
     {
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        
+
         //Chung
         //public static String connstrPublisher = "Data Source=DESKTOP-S3ASIHQ;Initial Catalog=THITN;Integrated Security=True";
         //Huy

@@ -1,7 +1,7 @@
 ﻿
 namespace THITN
 {
-    partial class NhapMon
+    partial class NhapLop
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@ namespace THITN
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapMon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapLop));
             this.tHITNDataSet1 = new THITN.THITNDataSet1();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mONHOCTableAdapter = new THITN.THITNDataSet1TableAdapters.MONHOCTableAdapter();
+            this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lOPTableAdapter = new THITN.THITNDataSet1TableAdapters.LOPTableAdapter();
             this.tableAdapterManager = new THITN.THITNDataSet1TableAdapters.TableAdapterManager();
-            this.mONHOCBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.lOPBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ThemLopBT = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.XoaLopBT = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -47,17 +47,19 @@ namespace THITN
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mONHOCBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.lOPBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.UndoBT = new System.Windows.Forms.ToolStripButton();
-            this.mONHOCGridControl = new DevExpress.XtraGrid.GridControl();
+            this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENMH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CBCoSo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tHITNDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingNavigator)).BeginInit();
-            this.mONHOCBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingNavigator)).BeginInit();
+            this.lOPBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,14 +68,14 @@ namespace THITN
             this.tHITNDataSet1.DataSetName = "THITNDataSet1";
             this.tHITNDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mONHOCBindingSource
+            // lOPBindingSource
             // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.tHITNDataSet1;
+            this.lOPBindingSource.DataMember = "LOP";
+            this.lOPBindingSource.DataSource = this.tHITNDataSet1;
             // 
-            // mONHOCTableAdapter
+            // lOPTableAdapter
             // 
-            this.mONHOCTableAdapter.ClearBeforeFill = true;
+            this.lOPTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -85,19 +87,19 @@ namespace THITN
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = null;
-            this.tableAdapterManager.MONHOCTableAdapter = this.mONHOCTableAdapter;
+            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
+            this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = THITN.THITNDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // mONHOCBindingNavigator
+            // lOPBindingNavigator
             // 
-            this.mONHOCBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.mONHOCBindingNavigator.BindingSource = this.mONHOCBindingSource;
-            this.mONHOCBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.mONHOCBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.mONHOCBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.mONHOCBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lOPBindingNavigator.AddNewItem = this.ThemLopBT;
+            this.lOPBindingNavigator.BindingSource = this.lOPBindingSource;
+            this.lOPBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.lOPBindingNavigator.DeleteItem = this.XoaLopBT;
+            this.lOPBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.lOPBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -107,29 +109,29 @@ namespace THITN
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.mONHOCBindingNavigatorSaveItem,
+            this.ThemLopBT,
+            this.XoaLopBT,
+            this.lOPBindingNavigatorSaveItem,
             this.UndoBT});
-            this.mONHOCBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.mONHOCBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.mONHOCBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.mONHOCBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.mONHOCBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.mONHOCBindingNavigator.Name = "mONHOCBindingNavigator";
-            this.mONHOCBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.mONHOCBindingNavigator.Size = new System.Drawing.Size(905, 27);
-            this.mONHOCBindingNavigator.TabIndex = 4;
-            this.mONHOCBindingNavigator.Text = "bindingNavigator1";
+            this.lOPBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.lOPBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.lOPBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.lOPBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.lOPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.lOPBindingNavigator.Name = "lOPBindingNavigator";
+            this.lOPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.lOPBindingNavigator.Size = new System.Drawing.Size(782, 27);
+            this.lOPBindingNavigator.TabIndex = 0;
+            this.lOPBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // ThemLopBT
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.ThemLopBT.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ThemLopBT.Image = ((System.Drawing.Image)(resources.GetObject("ThemLopBT.Image")));
+            this.ThemLopBT.Name = "ThemLopBT";
+            this.ThemLopBT.RightToLeftAutoMirrorImage = true;
+            this.ThemLopBT.Size = new System.Drawing.Size(29, 24);
+            this.ThemLopBT.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
@@ -138,14 +140,14 @@ namespace THITN
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorDeleteItem
+            // XoaLopBT
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.XoaLopBT.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.XoaLopBT.Image = ((System.Drawing.Image)(resources.GetObject("XoaLopBT.Image")));
+            this.XoaLopBT.Name = "XoaLopBT";
+            this.XoaLopBT.RightToLeftAutoMirrorImage = true;
+            this.XoaLopBT.Size = new System.Drawing.Size(29, 24);
+            this.XoaLopBT.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -208,14 +210,14 @@ namespace THITN
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // mONHOCBindingNavigatorSaveItem
+            // lOPBindingNavigatorSaveItem
             // 
-            this.mONHOCBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mONHOCBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("mONHOCBindingNavigatorSaveItem.Image")));
-            this.mONHOCBindingNavigatorSaveItem.Name = "mONHOCBindingNavigatorSaveItem";
-            this.mONHOCBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.mONHOCBindingNavigatorSaveItem.Text = "Save Data";
-            this.mONHOCBindingNavigatorSaveItem.Click += new System.EventHandler(this.mONHOCBindingNavigatorSaveItem_Click_1);
+            this.lOPBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.lOPBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("lOPBindingNavigatorSaveItem.Image")));
+            this.lOPBindingNavigatorSaveItem.Name = "lOPBindingNavigatorSaveItem";
+            this.lOPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.lOPBindingNavigatorSaveItem.Text = "Save Data";
+            this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
             // UndoBT
             // 
@@ -227,60 +229,80 @@ namespace THITN
             this.UndoBT.Text = "toolStripButton1";
             this.UndoBT.Click += new System.EventHandler(this.UndoBT_Click);
             // 
-            // mONHOCGridControl
+            // lOPGridControl
             // 
-            this.mONHOCGridControl.DataSource = this.mONHOCBindingSource;
-            this.mONHOCGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mONHOCGridControl.Location = new System.Drawing.Point(0, 137);
-            this.mONHOCGridControl.MainView = this.gridView1;
-            this.mONHOCGridControl.Name = "mONHOCGridControl";
-            this.mONHOCGridControl.Size = new System.Drawing.Size(905, 368);
-            this.mONHOCGridControl.TabIndex = 5;
-            this.mONHOCGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.lOPGridControl.DataSource = this.lOPBindingSource;
+            this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 187);
+            this.lOPGridControl.MainView = this.gridView1;
+            this.lOPGridControl.Name = "lOPGridControl";
+            this.lOPGridControl.Size = new System.Drawing.Size(782, 345);
+            this.lOPGridControl.TabIndex = 1;
+            this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAMH,
-            this.colTENMH});
-            this.gridView1.GridControl = this.mONHOCGridControl;
+            this.colMALOP,
+            this.colTENLOP,
+            this.colMAKH});
+            this.gridView1.GridControl = this.lOPGridControl;
             this.gridView1.Name = "gridView1";
             // 
-            // colMAMH
+            // colMALOP
             // 
-            this.colMAMH.FieldName = "MAMH";
-            this.colMAMH.MinWidth = 25;
-            this.colMAMH.Name = "colMAMH";
-            this.colMAMH.Visible = true;
-            this.colMAMH.VisibleIndex = 0;
-            this.colMAMH.Width = 94;
+            this.colMALOP.FieldName = "MALOP";
+            this.colMALOP.MinWidth = 25;
+            this.colMALOP.Name = "colMALOP";
+            this.colMALOP.Visible = true;
+            this.colMALOP.VisibleIndex = 0;
+            this.colMALOP.Width = 94;
             // 
-            // colTENMH
+            // colTENLOP
             // 
-            this.colTENMH.FieldName = "TENMH";
-            this.colTENMH.MinWidth = 25;
-            this.colTENMH.Name = "colTENMH";
-            this.colTENMH.Visible = true;
-            this.colTENMH.VisibleIndex = 1;
-            this.colTENMH.Width = 94;
+            this.colTENLOP.FieldName = "TENLOP";
+            this.colTENLOP.MinWidth = 25;
+            this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.Visible = true;
+            this.colTENLOP.VisibleIndex = 1;
+            this.colTENLOP.Width = 94;
             // 
-            // NhapMon
+            // colMAKH
+            // 
+            this.colMAKH.FieldName = "MAKH";
+            this.colMAKH.MinWidth = 25;
+            this.colMAKH.Name = "colMAKH";
+            this.colMAKH.Visible = true;
+            this.colMAKH.VisibleIndex = 2;
+            this.colMAKH.Width = 94;
+            // 
+            // CBCoSo
+            // 
+            this.CBCoSo.FormattingEnabled = true;
+            this.CBCoSo.Location = new System.Drawing.Point(165, 51);
+            this.CBCoSo.Name = "CBCoSo";
+            this.CBCoSo.Size = new System.Drawing.Size(391, 24);
+            this.CBCoSo.TabIndex = 2;
+            this.CBCoSo.SelectedIndexChanged += new System.EventHandler(this.CBCoSo_SelectedIndexChanged);
+            // 
+            // NhapLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 505);
-            this.Controls.Add(this.mONHOCGridControl);
-            this.Controls.Add(this.mONHOCBindingNavigator);
-            this.Name = "NhapMon";
-            this.Text = "NhapMon";
-            this.Load += new System.EventHandler(this.NhapMon_Load);
+            this.ClientSize = new System.Drawing.Size(782, 532);
+            this.Controls.Add(this.CBCoSo);
+            this.Controls.Add(this.lOPGridControl);
+            this.Controls.Add(this.lOPBindingNavigator);
+            this.Name = "NhapLop";
+            this.Text = "NhapLop";
+            this.Load += new System.EventHandler(this.NhapLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tHITNDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingNavigator)).EndInit();
-            this.mONHOCBindingNavigator.ResumeLayout(false);
-            this.mONHOCBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mONHOCGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingNavigator)).EndInit();
+            this.lOPBindingNavigator.ResumeLayout(false);
+            this.lOPBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,14 +310,15 @@ namespace THITN
         }
 
         #endregion
+
         private THITNDataSet1 tHITNDataSet1;
-        private System.Windows.Forms.BindingSource mONHOCBindingSource;
-        private THITNDataSet1TableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
+        private System.Windows.Forms.BindingSource lOPBindingSource;
+        private THITNDataSet1TableAdapters.LOPTableAdapter lOPTableAdapter;
         private THITNDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator mONHOCBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.BindingNavigator lOPBindingNavigator;
+        private System.Windows.Forms.ToolStripButton ThemLopBT;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton XoaLopBT;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -304,11 +327,13 @@ namespace THITN
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton mONHOCBindingNavigatorSaveItem;
-        private DevExpress.XtraGrid.GridControl mONHOCGridControl;
+        private System.Windows.Forms.ToolStripButton lOPBindingNavigatorSaveItem;
+        private DevExpress.XtraGrid.GridControl lOPGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAMH;
-        private DevExpress.XtraGrid.Columns.GridColumn colTENMH;
+        private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
+        private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAKH;
         private System.Windows.Forms.ToolStripButton UndoBT;
+        private System.Windows.Forms.ComboBox CBCoSo;
     }
 }

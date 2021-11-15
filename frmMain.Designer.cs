@@ -39,6 +39,8 @@ namespace THITN
             this.btScoreBoard = new DevExpress.XtraBars.BarButtonItem();
             this.btRegisteredList = new DevExpress.XtraBars.BarButtonItem();
             this.ThemMHBT = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.ThemLopBT = new DevExpress.XtraBars.BarButtonItem();
             this.ribHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -52,7 +54,7 @@ namespace THITN
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.NhapKhoaBT = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -71,10 +73,12 @@ namespace THITN
             this.btScoreBoard,
             this.btRegisteredList,
             this.ThemMHBT,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.ThemLopBT,
+            this.NhapKhoaBT});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
@@ -144,6 +148,22 @@ namespace THITN
             this.ThemMHBT.Name = "ThemMHBT";
             this.ThemMHBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThemMHBT_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Đăng ký thi";
+            this.barButtonItem1.Id = 9;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_2);
+            // 
+            // ThemLopBT
+            // 
+            this.ThemLopBT.Caption = "Thêm lớp";
+            this.ThemLopBT.Id = 10;
+            this.ThemLopBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ThemLopBT.ImageOptions.Image")));
+            this.ThemLopBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("ThemLopBT.ImageOptions.LargeImage")));
+            this.ThemLopBT.Name = "ThemLopBT";
+            this.ThemLopBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ThemLopBT_ItemClick);
+            // 
             // ribHeThong
             // 
             this.ribHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -183,6 +203,8 @@ namespace THITN
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.ThemMHBT);
+            this.ribbonPageGroup3.ItemLinks.Add(this.ThemLopBT);
+            this.ribbonPageGroup3.ItemLinks.Add(this.NhapKhoaBT);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
@@ -237,12 +259,14 @@ namespace THITN
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barButtonItem1
+            // NhapKhoaBT
             // 
-            this.barButtonItem1.Caption = "Đăng ký thi";
-            this.barButtonItem1.Id = 9;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_2);
+            this.NhapKhoaBT.Caption = "Thêm khoa";
+            this.NhapKhoaBT.Id = 11;
+            this.NhapKhoaBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.NhapKhoaBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.NhapKhoaBT.Name = "NhapKhoaBT";
+            this.NhapKhoaBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapKhoaBT_ItemClick);
             // 
             // frmMain
             // 
@@ -292,6 +316,8 @@ namespace THITN
         private DevExpress.XtraBars.BarButtonItem btRegisteredList;
         private DevExpress.XtraBars.BarButtonItem ThemMHBT;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem ThemLopBT;
+        private DevExpress.XtraBars.BarButtonItem NhapKhoaBT;
     }
 }
 

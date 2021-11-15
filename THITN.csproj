@@ -94,6 +94,18 @@
     <Compile Include="View\frm_ChuanBiThi.designer.cs">
       <DependentUpon>frm_ChuanBiThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Insert\NhapKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Insert\NhapKhoa.Designer.cs">
+      <DependentUpon>NhapKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Insert\NhapLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Insert\NhapLop.Designer.cs">
+      <DependentUpon>NhapLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Insert\NhapMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +170,12 @@
     </Compile>
     <EmbeddedResource Include="View\frm_ChuanBiThi.resx">
       <DependentUpon>frm_ChuanBiThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Insert\NhapKhoa.resx">
+      <DependentUpon>NhapKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Insert\NhapLop.resx">
+      <DependentUpon>NhapLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Insert\NhapMon.resx">
       <DependentUpon>NhapMon.cs</DependentUpon>

@@ -41,5 +41,10 @@ namespace THITN
             this.tableAdapterManager.UpdateAll(this.tHITNDataSet1);
 
         }
+
+        private void UndoBT_Click(object sender, EventArgs e)
+        {
+            this.mONHOCBindingSource.CancelEdit();
+        }
     }
 }

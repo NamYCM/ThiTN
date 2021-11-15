@@ -38,6 +38,9 @@ namespace THITN
         public static String passwordDN = "";
         public static String mGroup;
         public static String mHoten;
+
+        //Sinh Vien temp
+        public static String maSV = "005";
         //public static int mCoSo = 0;
 
         public static BindingSource bdsDspm = new BindingSource();

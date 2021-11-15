@@ -644,3 +644,5 @@ D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.csproj.CopyComplete
 D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.exe
 D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.pdb
 D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.View.frm_ChuanBiThi.resources
+D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.View.frm_CBThi.resources
+D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.View.frm_Thi.resources

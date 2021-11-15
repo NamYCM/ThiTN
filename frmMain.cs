@@ -209,11 +209,11 @@ namespace THITN
 
         private void barButtonItem1_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frm_ChuanBiThi));
+            Form frm = CheckExists(typeof(frm_CBThi));
             if (frm != null) frm.Activate();
             else
             {
-                frm_ChuanBiThi f = new frm_ChuanBiThi();
+                frm_CBThi f = new frm_CBThi();
                 f.MdiParent = this;
 
                 f.Show();

@@ -91,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>THITNDataSet11.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\frm_Thi.cs">
+    <Compile Include="View\Thi\frm_Thi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frm_Thi.Designer.cs">
+    <Compile Include="View\Thi\frm_Thi.Designer.cs">
       <DependentUpon>frm_Thi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Thi\frm_CBThi.cs">
@@ -171,7 +171,7 @@
     <Compile Include="View\Reports\Xrpt_ScoreSubject.Designer.cs">
       <DependentUpon>Xrpt_ScoreSubject.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frm_Thi.resx">
+    <EmbeddedResource Include="View\Thi\frm_Thi.resx">
       <DependentUpon>frm_Thi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Thi\frm_CBThi.resx">

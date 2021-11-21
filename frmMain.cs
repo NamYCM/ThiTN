@@ -264,5 +264,41 @@ namespace THITN
                 f.Show();
             }
         }
+
+        private void NhapSVBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapSV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapSV nhapSV = new NhapSV();
+                nhapSV.MdiParent = this;
+                nhapSV.Show();
+            }
+        }
+
+        private void NhapGVBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapGV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapGV nhapGV = new NhapGV();
+                nhapGV.MdiParent = this;
+                nhapGV.Show();
+            }
+        }
+
+        private void NhapSVBT_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapSV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapSV nhapSV = new NhapSV();
+                nhapSV.MdiParent = this;
+                nhapSV.Show();
+            }
+        }
     }
 }

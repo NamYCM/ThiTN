@@ -811,3 +811,5 @@ C:\Users\Admin\Desktop\Code\CSDLPT_New\ThiTN\obj\Debug\THITN.csproj.CoreCompileI
 C:\Users\Admin\Desktop\Code\CSDLPT_New\ThiTN\obj\Debug\THITN.csproj.CopyComplete
 C:\Users\Admin\Desktop\Code\CSDLPT_New\ThiTN\obj\Debug\THITN.exe
 C:\Users\Admin\Desktop\Code\CSDLPT_New\ThiTN\obj\Debug\THITN.pdb
+D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.NhapGV.resources
+D:\CSDL_PhanTan\THITN\ThiTN\obj\Debug\THITN.NhapSV.resources

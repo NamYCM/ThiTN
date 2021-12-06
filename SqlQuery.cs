@@ -133,9 +133,10 @@ namespace THITN
             return list;
         }
 
-        public static int updateBangDiem(String maSV,String maMH,int lan,String ngayThi,float diem)
+        public static int updateBangDiem(String maSV,String maMH,int lan,String ngayThi,String diem)
         {
             String query = "exec [dbo].[sp_UpdateBangDiem] '"+maSV+"','"+maMH+"',"+lan+",'"+ngayThi+"', "+diem;
+            //Console.WriteLine(query);
             int value = Program.ExecSqlNonQuery(query);
             return value;
         }
@@ -162,7 +163,8 @@ namespace THITN
         }
         public static int updateBaiThi(int baiThi, int maCH,String daChon, int STT)
         {
-            String query = "exec [dbo].[sp_UpdateBaiThi] "+baiThi+","+maCH+",'"+daChon+"', "+STT;
+            String query = "exec [dbo].[sp_UpdateBaiThi] "+baiThi+","+maCH+","+daChon+", "+STT;
+            //Console.WriteLine(query);
             int value = Program.ExecSqlNonQuery(query);
             return value;
         }

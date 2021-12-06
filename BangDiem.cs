@@ -12,6 +12,6 @@ namespace THITN
         public String maMH { get; set; }
         public int lan { get; set; }
         public String ngayThi { get; set; }
-        public float diem { get; set; }
+        public String diem { get; set; }
     }
 }

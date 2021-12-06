@@ -241,7 +241,7 @@ namespace THITN.View
             // lbT
             // 
             this.lbT.AutoSize = true;
-            this.lbT.Location = new System.Drawing.Point(894, 162);
+            this.lbT.Location = new System.Drawing.Point(888, 134);
             this.lbT.Name = "lbT";
             this.lbT.Size = new System.Drawing.Size(42, 17);
             this.lbT.TabIndex = 17;
@@ -277,6 +277,7 @@ namespace THITN.View
             this.Controls.Add(this.label1);
             this.Name = "frm_Thi";
             this.Text = "frm_Thi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Thi_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

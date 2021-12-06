@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,14 @@ namespace THITN.View
         }
         public void showQuetion(int i)
         {
-            lbT.Text = list[i].TrueAnswer;
+            //lbT.Text = list[i].TrueAnswer;
+            String tableAnswer = "";
+            for(int j = 0; j < list.Count; j++)
+            {
+                if (j % 5 == 0 && j != 0) tableAnswer += "\n"; 
+                tableAnswer += j + 1 + ": "+list[j].YourAnswer.Trim()+"   ";
+            }
+            lbT.Text = tableAnswer;
             showCheckedItem(list[i].YourAnswer.Trim());
             txtSTT.Text = i+1+"";
             txtCauHoi.Text = list[i].cauHoi;
@@ -123,8 +131,11 @@ namespace THITN.View
                 }
             }
             diem = (float)soCauTLDung / list.Count * 10;
-            Console.WriteLine(diem);
-            bangDiem.diem = diem;
+            NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+            nfi.NumberDecimalSeparator = ".";
+            //Console.WriteLine(diem.ToString("N",nfi));
+            bangDiem.diem = diem.ToString("N", nfi);
+            //Console.WriteLine(bangDiem.diem);
             int value = SqlQuery.updateBangDiem(bangDiem.maSV, bangDiem.maMH, bangDiem.lan, bangDiem.ngayThi, bangDiem.diem);
             if (value != 0)
             {
@@ -132,7 +143,7 @@ namespace THITN.View
             }
             else
             {
-                MessageBox.Show("thêm bảng điểm thành công !", "thông báo", MessageBoxButtons.OK);
+                //MessageBox.Show("thêm bảng điểm thành công !", "thông báo", MessageBoxButtons.OK);
                 int _baiThi = SqlQuery.getBaiThi(bangDiem.maSV, bangDiem.maMH, bangDiem.lan);
                 if (_baiThi == 0)
                 {
@@ -146,7 +157,15 @@ namespace THITN.View
                         baiThi = new BaiThi();
                         baiThi.baiThi = _baiThi;
                         baiThi.maCauHoi = list[i].maCauHoi;
-                        baiThi.daChon = list[i].YourAnswer;
+                        if (list[i].YourAnswer.Equals(""))
+                        {
+                            baiThi.daChon = "null";
+                        }
+                        else
+                        {
+                            baiThi.daChon = list[i].YourAnswer;
+                        }
+                        
                         baiThi.STT = i + 1;
                         _check = SqlQuery.updateBaiThi(baiThi.baiThi, baiThi.maCauHoi, baiThi.daChon, baiThi.STT);
                         if (_check != 0)
@@ -158,7 +177,6 @@ namespace THITN.View
                     if (_check == 0)
                     {
                         timer1.Stop();
-                        this.Close();
                     }
                 }
 
@@ -167,11 +185,8 @@ namespace THITN.View
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn nộp bài và thoát khỏi cuộc thi hay không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
-            {
-                saveData();
-            }
             
+                this.Close();
             
         }
 
@@ -222,7 +237,7 @@ namespace THITN.View
                 timer1.Stop();
                 if (DialogResult.OK == MessageBox.Show("Đã hết giờ làm bài !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop))
                 {
-                    saveData();
+                    this.Close();
                 }
             }else
             {
@@ -244,6 +259,26 @@ namespace THITN.View
                 {
                     lbGiay.Text = giay.ToString();
                 }
+            }
+            
+        }
+
+        private void frm_Thi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (timer1.Enabled == true)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Bạn có muốn nộp bài và thoát khỏi cuộc thi hay không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
+                {
+                    saveData();
+
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else {
+                saveData();
             }
             
         }

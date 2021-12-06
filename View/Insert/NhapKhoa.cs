@@ -28,13 +28,13 @@ namespace THITN
 
         private void NhapKhoa_Load(object sender, EventArgs e)
         {
-            CBCoSo.SelectedValue = Program.mCS;
+            //CBCoSo.SelectedValue = Program.mCS;
             // TODO: This line of code loads data into the 'tHITNDataSet1.KHOA' table. You can move, or remove it, as needed.
             this.kHOATableAdapter.Connection.ConnectionString = Program.connstr;
             this.kHOATableAdapter.Fill(this.tHITNDataSet1.KHOA);
-            CBCoSo.DataSource = Program.bdsDspm;
-            CBCoSo.DisplayMember = "TENCS";
-            CBCoSo.ValueMember = "TENSERVER";
+            //CBCoSo.DataSource = Program.bdsDspm;
+            //CBCoSo.DisplayMember = "TENCS";
+            //CBCoSo.ValueMember = "TENSERVER";
         }
 
         private void UnDoBT_Click(object sender, EventArgs e)

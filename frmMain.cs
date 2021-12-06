@@ -107,7 +107,7 @@ namespace THITN
         private void frmMain_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            themes.LookAndFeel.SkinName = Program.themeSkinName;
+            //themes.LookAndFeel.SkinName = Program.themeSkinName;
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

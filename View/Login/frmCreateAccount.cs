@@ -161,8 +161,8 @@ namespace THITN.View.Login
                 XtraMessageBox.Show("Tài khoản không được để trống", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
-            if (dtpBirthday.Value > DateTime.Today)
+            
+            if (dtpBirthday.Visible && dtpBirthday.Value > DateTime.Today)
             {
                 XtraMessageBox.Show("Ngày sinh không đúng", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;

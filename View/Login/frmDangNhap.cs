@@ -26,7 +26,7 @@ namespace THITN
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            themes.LookAndFeel.SkinName = Program.themeSkinName;
+            //themes.LookAndFeel.SkinName = Program.themeSkinName;
 
             if (KetNoiCSDLGoc() == 0) return;
             LayDSPM();
@@ -80,7 +80,16 @@ namespace THITN
                 XtraMessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\nBạn xem lại tài khoản, mật khẩu", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Program.mHoten = Program.myReader.GetString(1);
+
+            try
+            {
+                Program.mHoten = Program.myReader.GetString(1);
+            }
+            catch (Exception)
+            {
+                //name null
+            }
+
             Program.mGroup = Program.myReader.GetString(2);
             if (cbCoSo.SelectedIndex == 0 || cbCoSo.SelectedIndex == 1)
             {

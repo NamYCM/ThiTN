@@ -403,3 +403,4 @@ E:\ALL_inPTITHCM\Nam4hk1\CSDLPhanTan\CuoiHP\ThiTN\obj\Debug\THITN.exe
 E:\ALL_inPTITHCM\Nam4hk1\CSDLPhanTan\CuoiHP\ThiTN\obj\Debug\THITN.pdb
 E:\ALL_inPTITHCM\Nam4hk1\CSDLPhanTan\CuoiHP\ThiTN\obj\Debug\THITN.NhapGV.resources
 E:\ALL_inPTITHCM\Nam4hk1\CSDLPhanTan\CuoiHP\ThiTN\obj\Debug\THITN.NhapSV.resources
+E:\ALL_inPTITHCM\Nam4hk1\CSDLPhanTan\CuoiHP\ThiTN\obj\Debug\THITN.NhapDe.resources

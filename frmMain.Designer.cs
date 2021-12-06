@@ -43,6 +43,9 @@ namespace THITN
             this.ThemLopBT = new DevExpress.XtraBars.BarButtonItem();
             this.NhapKhoaBT = new DevExpress.XtraBars.BarButtonItem();
             this.btnThi = new DevExpress.XtraBars.BarButtonItem();
+            this.NhapGVBT = new DevExpress.XtraBars.BarButtonItem();
+            this.NhapSVBT = new DevExpress.XtraBars.BarButtonItem();
+            this.NhapDeBT = new DevExpress.XtraBars.BarButtonItem();
             this.ribHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -56,8 +59,6 @@ namespace THITN
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.NhapGVBT = new DevExpress.XtraBars.BarButtonItem();
-            this.NhapSVBT = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -81,10 +82,11 @@ namespace THITN
             this.NhapKhoaBT,
             this.btnThi,
             this.NhapGVBT,
-            this.NhapSVBT});
+            this.NhapSVBT,
+            this.NhapDeBT});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribHeThong,
@@ -186,6 +188,33 @@ namespace THITN
             this.btnThi.Name = "btnThi";
             this.btnThi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThi_ItemClick);
             // 
+            // NhapGVBT
+            // 
+            this.NhapGVBT.Caption = "Nhập giáo viên";
+            this.NhapGVBT.Id = 14;
+            this.NhapGVBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("NhapGVBT.ImageOptions.Image")));
+            this.NhapGVBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NhapGVBT.ImageOptions.LargeImage")));
+            this.NhapGVBT.Name = "NhapGVBT";
+            this.NhapGVBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapGVBT_ItemClick);
+            // 
+            // NhapSVBT
+            // 
+            this.NhapSVBT.Caption = "Nhập Sinh viên";
+            this.NhapSVBT.Id = 15;
+            this.NhapSVBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("NhapSVBT.ImageOptions.Image")));
+            this.NhapSVBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NhapSVBT.ImageOptions.LargeImage")));
+            this.NhapSVBT.Name = "NhapSVBT";
+            this.NhapSVBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapSVBT_ItemClick_1);
+            // 
+            // NhapDeBT
+            // 
+            this.NhapDeBT.Caption = "Nhập đề";
+            this.NhapDeBT.Id = 16;
+            this.NhapDeBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("NhapDeBT.ImageOptions.Image")));
+            this.NhapDeBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NhapDeBT.ImageOptions.LargeImage")));
+            this.NhapDeBT.Name = "NhapDeBT";
+            this.NhapDeBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapDeBT_ItemClick);
+            // 
             // ribHeThong
             // 
             this.ribHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -230,8 +259,9 @@ namespace THITN
             this.ribbonPageGroup3.ItemLinks.Add(this.NhapKhoaBT);
             this.ribbonPageGroup3.ItemLinks.Add(this.NhapGVBT);
             this.ribbonPageGroup3.ItemLinks.Add(this.NhapSVBT);
+            this.ribbonPageGroup3.ItemLinks.Add(this.NhapDeBT);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Thêm thông tin";
             // 
             // ribBaoCao
             // 
@@ -283,24 +313,6 @@ namespace THITN
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // NhapGVBT
-            // 
-            this.NhapGVBT.Caption = "Nhập giáo viên";
-            this.NhapGVBT.Id = 14;
-            this.NhapGVBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.NhapGVBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.NhapGVBT.Name = "NhapGVBT";
-            this.NhapGVBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapGVBT_ItemClick);
-            // 
-            // NhapSVBT
-            // 
-            this.NhapSVBT.Caption = "Nhập Sinh viên";
-            this.NhapSVBT.Id = 15;
-            this.NhapSVBT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image1")));
-            this.NhapSVBT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage1")));
-            this.NhapSVBT.Name = "NhapSVBT";
-            this.NhapSVBT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhapSVBT_ItemClick_1);
             // 
             // frmMain
             // 
@@ -355,6 +367,7 @@ namespace THITN
         private DevExpress.XtraBars.BarButtonItem btnThi;
         private DevExpress.XtraBars.BarButtonItem NhapGVBT;
         private DevExpress.XtraBars.BarButtonItem NhapSVBT;
+        private DevExpress.XtraBars.BarButtonItem NhapDeBT;
     }
 }
 

@@ -17,7 +17,9 @@ namespace THITN
         public static String connstr;
 
         //Chung
+        public static int mCS = 0;
         public static String connstrPublisher = "Data Source=DESKTOP-S3ASIHQ;Initial Catalog=THITN;Integrated Security=True";
+        
         //Huy
         //public static String connstrPublisher = "Data Source=VANIC;Initial Catalog=THITN;Integrated Security=True";
 

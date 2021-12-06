@@ -300,5 +300,17 @@ namespace THITN
                 nhapSV.Show();
             }
         }
+
+        private void NhapDeBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapDe));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapDe nhapDe = new NhapDe();
+                nhapDe.MdiParent = this;
+                nhapDe.Show();
+            }
+        }
     }
 }

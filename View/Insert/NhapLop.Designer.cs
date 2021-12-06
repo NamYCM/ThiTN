@@ -132,6 +132,7 @@ namespace THITN
             this.ThemLopBT.RightToLeftAutoMirrorImage = true;
             this.ThemLopBT.Size = new System.Drawing.Size(29, 24);
             this.ThemLopBT.Text = "Add new";
+            this.ThemLopBT.Click += new System.EventHandler(this.ThemLopBT_Click);
             // 
             // bindingNavigatorCountItem
             // 

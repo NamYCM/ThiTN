@@ -107,7 +107,7 @@ namespace THITN
         private void frmMain_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            themes.LookAndFeel.SkinName = Program.themeSkinName;
+            //themes.LookAndFeel.SkinName = Program.themeSkinName;
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -298,6 +298,18 @@ namespace THITN
                 NhapSV nhapSV = new NhapSV();
                 nhapSV.MdiParent = this;
                 nhapSV.Show();
+            }
+        }
+
+        private void NhapDeBT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(NhapDe));
+            if (frm != null) frm.Activate();
+            else
+            {
+                NhapDe nhapDe = new NhapDe();
+                nhapDe.MdiParent = this;
+                nhapDe.Show();
             }
         }
     }

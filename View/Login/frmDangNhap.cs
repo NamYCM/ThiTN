@@ -26,7 +26,7 @@ namespace THITN
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            themes.LookAndFeel.SkinName = Program.themeSkinName;
+            //themes.LookAndFeel.SkinName = Program.themeSkinName;
 
             if (KetNoiCSDLGoc() == 0) return;
             LayDSPM();

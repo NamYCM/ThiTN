@@ -41,20 +41,27 @@ namespace THITN
 
         private void CBCoSo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (CBCoSo.SelectedValue.ToString() != "System.Data.DataRowView")
+            //if (CBCoSo.selectedvalue.tostring() != "system.data.datarowview")
             //{
-            //    Program.servername = CBCoSo.SelectedValue.ToString();
+            //    Program.servername = cbcoso.selectedvalue.tostring();
             //}
-            //if (CBCoSo.SelectedIndex != Program.)
+            //if (CBCoSo.selectedindex != Program.)
             //{
-            //    Program.mlogin = Program.remoteLogin;
-            //    Program.pass = Program.remotePass;
+            //    Program.mlogin = Program.remotelogin;
+            //    Program.pass = Program.remotepass;
             //}
             //else
             //{
-            //    Program.mlogin = Program.mloginDN;
-            //
-            //
+            //    Program.mlogin = Program.mlogindn;
+            //}
+
+        //private void ThemLopBT_Click(object sender, EventArgs e)
+        //{
+        //    //if (CBCoSo.SelectedIndex == 0)
+        //    //{ gridView1.SetFocusedRowCellValue("MACS", "CS1"); }
+        //    //else if (CBCoSo.SelectedIndex == 1)
+        //    //{ gridView1.SetFocusedRowCellValue("MACS", "CS2"); }
+        //}
         }
     }
 }

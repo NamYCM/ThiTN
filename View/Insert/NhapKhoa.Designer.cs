@@ -36,7 +36,7 @@ namespace THITN
             this.kHOATableAdapter = new THITN.THITNDataSet1TableAdapters.KHOATableAdapter();
             this.tableAdapterManager = new THITN.THITNDataSet1TableAdapters.TableAdapterManager();
             this.kHOABindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.aDDKhoaBT = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -93,7 +93,7 @@ namespace THITN
             // 
             // kHOABindingNavigator
             // 
-            this.kHOABindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.kHOABindingNavigator.AddNewItem = this.aDDKhoaBT;
             this.kHOABindingNavigator.BindingSource = this.kHOABindingSource;
             this.kHOABindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.kHOABindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -108,7 +108,7 @@ namespace THITN
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
+            this.aDDKhoaBT,
             this.bindingNavigatorDeleteItem,
             this.kHOABindingNavigatorSaveItem,
             this.UnDoBT});
@@ -119,23 +119,24 @@ namespace THITN
             this.kHOABindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.kHOABindingNavigator.Name = "kHOABindingNavigator";
             this.kHOABindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.kHOABindingNavigator.Size = new System.Drawing.Size(869, 27);
+            this.kHOABindingNavigator.Size = new System.Drawing.Size(869, 31);
             this.kHOABindingNavigator.TabIndex = 0;
             this.kHOABindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // aDDKhoaBT
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.aDDKhoaBT.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.aDDKhoaBT.Image = ((System.Drawing.Image)(resources.GetObject("aDDKhoaBT.Image")));
+            this.aDDKhoaBT.Name = "aDDKhoaBT";
+            this.aDDKhoaBT.RightToLeftAutoMirrorImage = true;
+            this.aDDKhoaBT.Size = new System.Drawing.Size(29, 28);
+            this.aDDKhoaBT.Text = "Add new";
+            this.aDDKhoaBT.Click += new System.EventHandler(this.aDDKhoaBT_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -145,7 +146,7 @@ namespace THITN
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -154,7 +155,7 @@ namespace THITN
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -163,19 +164,18 @@ namespace THITN
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -184,7 +184,7 @@ namespace THITN
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -192,7 +192,7 @@ namespace THITN
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -201,20 +201,20 @@ namespace THITN
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // kHOABindingNavigatorSaveItem
             // 
             this.kHOABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.kHOABindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("kHOABindingNavigatorSaveItem.Image")));
             this.kHOABindingNavigatorSaveItem.Name = "kHOABindingNavigatorSaveItem";
-            this.kHOABindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.kHOABindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.kHOABindingNavigatorSaveItem.Text = "Save Data";
             this.kHOABindingNavigatorSaveItem.Click += new System.EventHandler(this.kHOABindingNavigatorSaveItem_Click);
             // 
@@ -224,7 +224,7 @@ namespace THITN
             this.UnDoBT.Image = ((System.Drawing.Image)(resources.GetObject("UnDoBT.Image")));
             this.UnDoBT.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UnDoBT.Name = "UnDoBT";
-            this.UnDoBT.Size = new System.Drawing.Size(29, 24);
+            this.UnDoBT.Size = new System.Drawing.Size(29, 28);
             this.UnDoBT.Text = "toolStripButton1";
             this.UnDoBT.Click += new System.EventHandler(this.UnDoBT_Click);
             // 
@@ -232,10 +232,10 @@ namespace THITN
             // 
             this.kHOAGridControl.DataSource = this.kHOABindingSource;
             this.kHOAGridControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kHOAGridControl.Location = new System.Drawing.Point(0, 182);
+            this.kHOAGridControl.Location = new System.Drawing.Point(0, 222);
             this.kHOAGridControl.MainView = this.gridView1;
             this.kHOAGridControl.Name = "kHOAGridControl";
-            this.kHOAGridControl.Size = new System.Drawing.Size(869, 349);
+            this.kHOAGridControl.Size = new System.Drawing.Size(869, 309);
             this.kHOAGridControl.TabIndex = 1;
             this.kHOAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -305,7 +305,7 @@ namespace THITN
         private THITNDataSet1TableAdapters.KHOATableAdapter kHOATableAdapter;
         private THITNDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator kHOABindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton aDDKhoaBT;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

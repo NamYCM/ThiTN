@@ -17,6 +17,13 @@ namespace THITN
         public static String connstr;
 
         //Chung
+
+        //public static String connstrPublisher = "Data Source=ADMIN;Initial Catalog=THITN;Integrated Security=True";
+
+        public static int mCS = 0;
+        //public static String connstrPublisher = "Data Source=DESKTOP-S3ASIHQ;Initial Catalog=THITN;Integrated Security=True";
+        
+
         //public static String connstrPublisher = "Data Source=ADMIN;Initial Catalog=THITN;Integrated Security=True";
         //Huy
         public static String connstrPublisher = "Data Source=VANIC;Initial Catalog=THITN;Integrated Security=True";
@@ -27,6 +34,7 @@ namespace THITN
         public static String servername1 = "VANIC\\MSSQLSERVER1";
         public static String servername2 = "VANIC\\MSSQLSERVER2";
         public static String servername3 = "VANIC\\MSSQLSERVER3";
+
         public static String username;
         public static String password;
         public static String mlogin;
@@ -46,7 +54,7 @@ namespace THITN
         public static BindingSource bdsDspm = new BindingSource();
         public static frmMain frmMain;
 
-        public static String themeSkinName = "Coffee";
+        //public static String themeSkinName = "Blue";
 
         public static int KetNoi ()
         {

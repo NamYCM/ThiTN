@@ -48,9 +48,16 @@ namespace THITN.View.Reports
             data = subjectAdapter.GetDataBySubjectID(subjectID);
             xlbSubject.Text = ": " + data.Rows[0]["TENMH"].ToString();
 
+            try
+            {
             teacherAdapter.Connection = Program.conn;
             data = teacherAdapter.GetDataByClassSubjectTime(subjectID, classID, (short)time);
             xlbTeacher.Text = ": " + data.Rows[0]["HO"].ToString() + " " + data.Rows[0]["TEN"].ToString();
+
+            } catch (Exception)
+            {
+
+            }
 
             teacherRegistedAdapter.Connection = Program.conn;
             data = teacherRegistedAdapter.GetDataBySubjectClassTime(subjectID, classID, (short)time);

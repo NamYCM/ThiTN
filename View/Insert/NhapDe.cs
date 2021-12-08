@@ -21,6 +21,8 @@ namespace THITN
         private void bODEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
+            this.tableAdapterManager.Connection.ConnectionString = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database +
+                     ";User ID=" + Program.remoteLogin + ";password=" + Program.remotePassword;
             this.bODEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.tHITNDataSet1);
 

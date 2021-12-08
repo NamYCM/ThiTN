@@ -21,6 +21,8 @@ namespace THITN
         private void kHOABindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
+            this.tableAdapterManager.Connection.ConnectionString = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database +
+                     ";User ID=" + Program.remoteLogin + ";password=" + Program.remotePassword;
             this.kHOABindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.tHITNDataSet1);
 
@@ -46,8 +48,14 @@ namespace THITN
         {
             if (Program.servername == Program.servername1)
             {
-               //========tu them ma cs===========gridView1.
+                //========tu them ma cs===========gridView1.
+                gridView1.SetFocusedRowCellValue("MACS", "CS1");
             }
+            else
+            {
+                gridView1.SetFocusedRowCellValue("MACS", "CS2");
+            }
+
         }
 
     }

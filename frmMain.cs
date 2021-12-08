@@ -44,25 +44,29 @@ namespace THITN
             Nhom.Text = "Nhóm = " + Program.mGroup;
 
             //Phan quyen
-            //ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = true;
-            ribNghiepVu.Visible = true;
+            ribBaoCao.Visible = ribDanhMuc.Visible = ribNghiepVu.Visible = false;
+            //ribNghiepVu.Visible = true;
             if (Program.mGroup == "SINHVIEN")
             {
-                ribBaoCao.Visible = true;
+                ribBaoCao.Visible = ribDanhMuc.Visible = true;
                 btResultTest.Enabled = true;
+                btnThi.Enabled = true;
             }
             else if (Program.mGroup == "TRUONG")
             {
                 ribBaoCao.Visible = true;
                 btResultTest.Enabled = true;
                 btRegisteredList.Enabled = true;
+                btScoreBoard.Enabled = true;
                 btTaoTaiKhoan.Enabled = true;
             }
             else if (Program.mGroup == "GIAOVIEN")
             {
-                ribBaoCao.Visible = true;
+                ribBaoCao.Visible = ribNghiepVu.Visible = true;
                 btScoreBoard.Enabled = true;
                 btResultTest.Enabled = true;
+
+                ThemMHBT.Enabled = NhapDeBT.Enabled = true;
             }
             else if (Program.mGroup == "COSO")
             {
@@ -70,12 +74,18 @@ namespace THITN
                 btResultTest.Enabled = true;
                 btRegisteredList.Enabled = true;
                 btTaoTaiKhoan.Enabled = true;
+
+                btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = btScoreBoard.Enabled = btResultTest.Enabled = true;
+
+                barButtonItem1.Enabled = btnThi.Enabled = true;
+
+                ThemMHBT.Enabled = ThemLopBT.Enabled = NhapKhoaBT.Enabled = NhapGVBT.Enabled = NhapSVBT.Enabled = NhapDeBT.Enabled = true;
             }
             //else if (Program.mGroup == "COSO")
             //else if (Program.mGroup == "TRUONG")
             //else if (Program.mGroup == "LOP")
             //Tiep tuc if
-            btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = btScoreBoard.Enabled = btResultTest.Enabled = true;
+            //btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible = btScoreBoard.Enabled = btResultTest.Enabled = true;
         }
 
         public void HideMenu ()
@@ -83,6 +93,9 @@ namespace THITN
             //Phan quyen
             btTaoTaiKhoan.Enabled = btRegisteredList.Enabled = ribBaoCao.Visible = ribDanhMuc.Visible= btScoreBoard.Enabled = btResultTest.Enabled = false;
 
+            barButtonItem1.Enabled = btnThi.Enabled = false;
+
+            ThemMHBT.Enabled = ThemLopBT.Enabled = NhapKhoaBT.Enabled = NhapGVBT.Enabled = NhapSVBT.Enabled = NhapDeBT.Enabled = false;
             foreach (Form f in this.MdiChildren)
             {
                 f.Close();

@@ -38,7 +38,7 @@ namespace THITN.View
             
             //load info student
             List<String> listInFo = new List<String>(); 
-               listInFo =  SqlQuery.getInfoSV(Program.maSV);
+               listInFo =  SqlQuery.getInfoSV(Program.username);
             maLop = listInFo[3];
             lbMaSV.Text = listInFo[0];
             lbTenSV.Text = listInFo[1] + " " + listInFo[2];
@@ -74,7 +74,7 @@ namespace THITN.View
             {
                 if (!validateDate())
                 {
-                    DataTable table = SqlQuery.getTableGVDK(Program.maSV, maLop, cbbMH.SelectedValue.ToString(), Int32.Parse(cbbLan.Text), dateEdit1.Text);
+                    DataTable table = SqlQuery.getTableGVDK(Program.username, maLop, cbbMH.SelectedValue.ToString(), Int32.Parse(cbbLan.Text), dateEdit1.Text);
                     tableGVDK.DataSource = table;
                     if (tableGVDK.Rows[0].Cells[0].Value.ToString().Trim().Equals("0"))
                     {
@@ -214,7 +214,7 @@ namespace THITN.View
 
                 //thông tin bảng điểm 
                 BangDiem bangDiem = new BangDiem();
-                bangDiem.maSV = Program.maSV;
+                bangDiem.maSV = Program.username;
                 bangDiem.maMH = _maMH;
                 bangDiem.lan = Int32.Parse(tableGVDK.Rows[0].Cells[4].Value?.ToString());
                 bangDiem.ngayThi = ((DateTime)tableGVDK.Rows[0].Cells[3].Value).ToString("yyyy/MM/dd HH:mm:ss");

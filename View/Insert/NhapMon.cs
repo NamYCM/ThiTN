@@ -13,9 +13,13 @@ namespace THITN
 {
     public partial class NhapMon : DevExpress.XtraEditors.XtraForm
     {
+        
         public NhapMon()
         {
             InitializeComponent();
+            //this.tableAdapterManager.Connection.ConnectionString = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database +
+            //        ";User ID=" + Program.remoteLogin + ";password=" + Program.remotePassword;
+            //Program.connstrPublisher;
         }
 
         private void mONHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -36,7 +40,9 @@ namespace THITN
 
         private void mONHOCBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
-            this.Validate();
+            this.Validate(); 
+            this.tableAdapterManager.Connection.ConnectionString = "Data Source=" + Program.servername + ";Initial Catalog=" + Program.database +
+                     ";User ID=" + Program.remoteLogin + ";password=" + Program.remotePassword;
             this.mONHOCBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.tHITNDataSet1);
 

@@ -24,16 +24,16 @@ namespace THITN
         //public static String connstrPublisher = "Data Source=DESKTOP-S3ASIHQ;Initial Catalog=THITN;Integrated Security=True";
         
 
-        //public static String connstrPublisher = "Data Source=ADMIN;Initial Catalog=THITN;Integrated Security=True";
+        public static String connstrPublisher = "Data Source=ADMIN;Initial Catalog=THITN;Integrated Security=True";
         //Huy
-        public static String connstrPublisher = "Data Source=VANIC;Initial Catalog=THITN;Integrated Security=True";
+        //public static String connstrPublisher = "Data Source=VANIC;Initial Catalog=THITN;Integrated Security=True";
 
         //public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "";
-        public static String servername1 = "VANIC\\MSSQLSERVER1";
-        public static String servername2 = "VANIC\\MSSQLSERVER2";
-        public static String servername3 = "VANIC\\MSSQLSERVER3";
+        public static String servername1 = "ADMIN\\SERVER1";
+        public static String servername2 = "ADMIN\\SERVER2";
+        public static String servername3 = "ADMIN\\SERVER3";
 
         public static String username;
         public static String password;

@@ -63,11 +63,15 @@ namespace THITN.View.Reports
         private void LoadClass()
         {
             LOPTableAdapter classAdapter = new LOPTableAdapter();
-            classAdapter.Connection = Program.conn;
+            classAdapter.Connection.ConnectionString = Program.connstr;
 
+            classAdapter.Connection.Open();
+
+            
             cbClass.DisplayMember = "TENLOP";
             cbClass.ValueMember = "MALOP";
-            cbClass.DataSource = classAdapter.GetData();
+            cbClass.DataSource = Program.ExecSqlDataTable("SELECT * FROM LOP");
+            // classAdapter.GetData();
             //cbClass.SelectedIndex = -1;
             //cbClass.SelectedIndex = 0;
 

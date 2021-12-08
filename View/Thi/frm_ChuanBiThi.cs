@@ -14,6 +14,7 @@ namespace THITN.View
 {
     public partial class frm_ChuanBiThi : DevExpress.XtraEditors.XtraForm
     {
+        bool checkEdit = false;
         public frm_ChuanBiThi()
         {
             InitializeComponent();
@@ -22,7 +23,8 @@ namespace THITN.View
         public void xuLyButton(Boolean b)
         {
            this.btnF.Enabled = btnP.Enabled = btnN.Enabled = btnL.Enabled = btnAdd.Enabled = btnEdit.Enabled = btnDel.Enabled = b;
-            btnSave.Enabled = btnCancel.Enabled = grThongtin.Enabled = !b;
+            btnSave.Enabled = btnCancel.Enabled = grThongtin.Enabled = checkEdit = !b;
+            
         }
         private void gIAOVIEN_DANGKYBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -85,7 +87,7 @@ namespace THITN.View
                 {
                     if (!validateQuestion())
                     {
-                        if (!validateRegister())
+                        if (checkEdit == true)
                         {
                             try
                             {
@@ -102,6 +104,27 @@ namespace THITN.View
                                 MessageBox.Show("Lưu không thành công !" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
+                        else
+                        {
+                            if (!validateRegister())
+                            {
+                                try
+                                {
+                                    this.Validate();
+                                    this.gIAOVIEN_DANGKYBindingSource.EndEdit();
+                                    this.tableAdapterManager.Connection = Program.conn;
+                                    this.tableAdapterManager.UpdateAll(this.tHITNDataSet1);
+                                    MessageBox.Show("Đã lưu thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    xuLyButton(true);
+                                }
+                                catch (Exception ex)
+                                {
+
+                                    MessageBox.Show("Lưu không thành công !" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                        
                         
                     }
                     
